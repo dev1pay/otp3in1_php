@@ -21,7 +21,6 @@
 	$requestId = $_POST['requestId'];
 	$telcos = $_POST['telcos'];                     
 	if($telcos == 'vnp'){
-		$back_url = "./otp_vnp_ws.php";
 		$data = "access_key=" .$access_key. "&amount=" .$amount. "&content=" .$content. "&msisdn=" .$msisdn. "&requestId=" .$requestId;
 		$signature = hash_hmac("sha256", $data, $secret);
 		$data.= "&signature=" . $signature; //"&backUrl=".$back_url.
@@ -32,7 +31,7 @@
 		$requestId_back = $decode_Charging["requestId"];
 		$transId = $decode_Charging["transId"];
 		$errorCode = $decode_Charging["errorCode"];
-		$redirect_url = $decode_Charging["redirectUrl"];
+		$redirect_url = $decode_Charging["redirectUrl"]; // link ws khai bao tran trang san pham 1pay
 
  header("Location: $redirect_url");  //URL address implement submit request (redirect)
    
