@@ -13,8 +13,8 @@
 		curl_close($ch);
 		return $result;
 	}
-	$access_key = "zg7wegxiyiy9xmio15iy";           // access_key được cấp bởi 1pay, thay bằng access_key của bạn
-	$secret = "k22027o02b0bnzvca3sxex3fzbolsdw2";   // secret key được cấp bởi 1pay, thay bằng secret_key của bạn                                                                              // bạn thay bằng return_url của bạn
+	$access_key = "";           // access_key được cấp bởi 1pay, thay bằng access_key của bạn
+	$secret = "";   // secret key được cấp bởi 1pay, thay bằng secret_key của bạn                                                                              // bạn thay bằng return_url của bạn
 	$msisdn = $_POST['msisdn'];
 	$amount = $_POST['amount'];				// >10000
 	$content = $_POST['content'];			// Mô tả hóa đơn	
